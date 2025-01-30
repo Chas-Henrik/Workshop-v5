@@ -9,15 +9,15 @@ export type PokedexProps = {
 }
 
 export function Pokedex({isWinner, pokeArr}: PokedexProps) {
-    const pokecards = pokeArr.map((pokecard: PokecardProps) => <Pokecard key={pokecard.id} {...pokecard}/>);
+    const pokecards = pokeArr.map((pokecard: PokecardProps, index) => <li key={index}><Pokecard {...pokecard}/></li>);
     const totExp = pokeArr.reduce((acc, curr) => acc + curr.base_experience, 0);
 
     return (
         <article className="pokedex-container">
             <h1>Pokedex</h1>
-            <div className="pokedex">
+            <ul className="pokedex">
                 {pokecards}
-            </div>
+            </ul>
             <p>Total experience: {totExp}</p>
             <p>{isWinner && "THIS HAND WINS!"}</p>
         </article>
