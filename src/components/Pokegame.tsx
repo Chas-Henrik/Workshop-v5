@@ -1,6 +1,6 @@
 import './Pokedex.css'
 import { Pokedex } from "./Pokedex.tsx"
-import {PokecardProps, Pokecard} from './Pokecard'
+import { PokecardProps } from './Pokecard'
 
 
 

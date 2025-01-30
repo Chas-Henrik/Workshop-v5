@@ -11,12 +11,12 @@ export type PokecardProps = {
 export function Pokecard({id, name, type, base_experience}: PokecardProps) {
     const imgSrc = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
     return (
-        <div className="pokecard">
+        <article className="pokecard">
             <h2>{name}</h2>
             <img src={imgSrc} alt={name + "avatar image"}/>
             <p>Type: {type}</p>
             <p>EXP: {base_experience}</p>
-        </div>
+        </article>
     )
 }
 
